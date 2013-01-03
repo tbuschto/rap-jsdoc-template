@@ -40,8 +40,9 @@ function publish(symbolSet) {
   var files = JSDOC.opt.srcFiles;
 
    // get a list of all the classes in the symbolset
-   var classes = symbols.filter(isaNamespace).sort(makeSortby("alias"));
-   var classes = classes.concat( symbols.filter(isaClass).sort(makeSortby("alias")) );
+   var namespacesOnly = symbols.filter(isaNamespace).sort(makeSortby("alias"));
+   var classesOnly = symbols.filter(isaClass).sort(makeSortby("alias"));
+   var classes = classesOnly.concat( namespacesOnly );
 
   // create a filemap in which outfiles must be to be named uniquely, ignoring case
   if (JSDOC.opt.u) {
@@ -87,7 +88,10 @@ function publish(symbolSet) {
   }
   catch(e) { print(e.message); quit(); }
 
-  var classesIndex = classesindexTemplate.process(classes);
+  var classesIndex = classesindexTemplate.process( {
+    "classes" : classesOnly,
+    "namespaces" : namespacesOnly
+  } );
   IO.saveFile(publish.conf.outDir, "index"+publish.conf.ext, classesIndex);
   classesindexTemplate = classesIndex = classes = null;
 
