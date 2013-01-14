@@ -42,7 +42,7 @@
             classType += "Namespace ";
           }
           else {
-            classType += "Class ";
+            classType += "Type ";
           }
         !}
         {+classType+}{+data.alias+}
@@ -69,7 +69,7 @@
       </p>
 
 <!-- ============================== constructor summary ==================== -->
-      <if test="!data.isBuiltin() && (data.isNamespace || data.is('CONSTRUCTOR'))">
+      <if test="!data.isBuiltin() && (data.isNamespace || data.is('CONSTRUCTOR')) && !data.isPrivate">
       <table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class {+data.alias+}.">
         <caption>{+classType+}Summary</caption>
         <thead>
