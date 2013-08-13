@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/org.eclipse.rap.jsdoctoolkit/src/JsRun.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="JsRun"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="app/run.js &#13;&#10;&quot;${resource_loc:/org.eclipse.rap.rwt/js/rwt/remote/RemoteObject.js}&quot;  &#13;&#10;&quot;${resource_loc:/org.eclipse.rap.rwt/js/rap.js}&quot; &#13;&#10;&quot;${resource_loc:/org.eclipse.rap.rwt/js/rwt/scripting/SWT.js}&quot; &#13;&#10;&quot;${resource_loc:/org.eclipse.rap.rwt/js/rwt/scripting/EventProxy.js}&quot; &#13;&#10;-d=&quot;result&quot;&#13;&#10;-t=&quot;${resource_loc:/rap-jsdoc-template/rwt-template}&quot; &#13;&#10;-p"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.eclipse.rap.jsdoctoolkit"/>
+</launchConfiguration>

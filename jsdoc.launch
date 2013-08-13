@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="org.eclipse.ui.externaltools.ProgramLaunchConfigurationType">
-<stringAttribute key="org.eclipse.debug.core.ATTR_REFRESH_SCOPE" value="${project}"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="${system_property:java.home}/bin/java.exe"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-jar jsrun.jar app\run.js &quot;${resource_loc:/org.eclipse.rap.rwt/js/rap.js}&quot; &quot;${resource_loc:/org.eclipse.rap.rwt/js/rwt/remote/RemoteObject.js}&quot;  -d=&quot;${resource_loc:/org.eclipse.rap.doc/guide/reference/jsdoc}&quot; -t=&quot;${resource_loc:/rap-jsdoc-template/template}&quot; -p"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="C:\dev\jsdoc-toolkit"/>
-</launchConfiguration>

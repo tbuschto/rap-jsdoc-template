@@ -39,7 +39,7 @@
             if (data.is('FUNCTION')) {
               classType += "Function ";
             }
-            classType += "Namespace ";
+            classType += "Object ";
           }
           else {
             classType += "Type ";
@@ -86,7 +86,7 @@
             !}&nbsp;</td>
             <td class="nameDescription" {!if (data.comment.getTag("hilited").length){output += 'style="color: red"'}!}>
               <div class="fixedFont">
-                <b>{+ new Link().toSymbol(data.alias).inner('constructor')+}</b><if test="classType != 'Namespace '">{+ makeSignature(data.params) +}</if>
+                <b>{+ new Link().toSymbol(data.alias).inner('constructor')+}</b><if test="classType != 'Object '">{+ makeSignature(data.params) +}</if>
               </div>
               <div class="description">{+resolveLinks(summarize(data.desc))+}</div>
             </td>
@@ -291,7 +291,7 @@
           if (data.isPrivate) output += "&lt;private&gt; ";
           if (data.isInner) output += "&lt;inner&gt; ";
         !}
-            <b>{+ data.alias +}</b><if test="classType != 'Namespace '">{+ makeSignature(data.params) +}</if>
+            <b>{+ data.alias +}</b><if test="classType != 'Object '">{+ makeSignature(data.params) +}</if>
         </div>
 
         <div class="description">
